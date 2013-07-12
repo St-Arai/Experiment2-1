@@ -96,6 +96,7 @@ public class Button extends SimpleAttachableMaterialData implements Redstone {
             break;
             
         default:
+        	break;
         }
 
         setData(data);

@@ -111,7 +111,7 @@ public class Door extends MaterialData implements Directional, Openable {
             break;
             
          default:
-        	 
+        	 break;
         }
         setData(data);
     }

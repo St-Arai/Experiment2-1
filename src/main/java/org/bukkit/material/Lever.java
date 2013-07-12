@@ -133,6 +133,7 @@ public class Lever extends SimpleAttachableMaterialData implements Redstone {
                 break;
                 
             default:
+            	break;
             }
         }
         setData(data);

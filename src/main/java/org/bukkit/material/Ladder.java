@@ -76,6 +76,8 @@ public class Ladder extends SimpleAttachableMaterialData {
             break;
             
             default:
+            	break;
+            	
         }
 
         setData(data);

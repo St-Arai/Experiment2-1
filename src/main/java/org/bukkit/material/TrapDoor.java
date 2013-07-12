@@ -97,6 +97,8 @@ public class TrapDoor extends SimpleAttachableMaterialData implements Openable {
             case EAST:
                 data |= 0x3;
                 break;
+            default:
+            	break;
         }
 
         setData(data);
