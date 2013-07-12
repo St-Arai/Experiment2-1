@@ -770,9 +770,6 @@ public class MemorySection implements ConfigurationSection {
     public static String createPath(ConfigurationSection section, String key, ConfigurationSection relativeTo) {
         Validate.notNull(section, "Cannot create path without a section");
         Configuration root = section.getRoot();
-        if (root == null) {
-            throw new IllegalStateException("Cannot create path without a root");
-        }
         char separator = root.options().pathSeparator();
 
         StringBuilder builder = new StringBuilder();

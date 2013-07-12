@@ -106,12 +106,10 @@ public class ConfigurationSerialization {
         ConfigurationSerializable result = null;
         Method method = null;
 
-        if (result == null) {
-            method = getMethod("deserialize", true);
+        method = getMethod("deserialize", true);
 
-            if (method != null) {
-                result = deserializeViaMethod(method, args);
-            }
+        if (method != null) {
+            result = deserializeViaMethod(method, args);
         }
 
         if (result == null) {

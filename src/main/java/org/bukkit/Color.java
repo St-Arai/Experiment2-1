@@ -279,10 +279,10 @@ public final class Color implements ConfigurationSerializable {
             totalMax += Math.max(Math.max(color.getRed(), color.getGreen()), color.getBlue());
         }
 
-        float averageRed = totalRed / (colors.length + 1);
-        float averageGreen = totalGreen / (colors.length + 1);
-        float averageBlue = totalBlue / (colors.length + 1);
-        float averageMax = totalMax / (colors.length + 1);
+        int averageRed = totalRed / (colors.length + 1);
+        int averageGreen = totalGreen / (colors.length + 1);
+        int averageBlue = totalBlue / (colors.length + 1);
+        int averageMax = totalMax / (colors.length + 1);
 
         float maximumOfAverages = Math.max(Math.max(averageRed, averageGreen), averageBlue);
         float gainFactor = averageMax / maximumOfAverages;

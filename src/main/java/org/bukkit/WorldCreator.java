@@ -27,7 +27,6 @@ public class WorldCreator {
         }
 
         this.name = name;
-        this.seed = (new Random()).nextLong();
     }
 
     /**
