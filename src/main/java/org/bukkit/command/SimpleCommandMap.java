@@ -290,8 +290,9 @@ public class SimpleCommandMap implements CommandMap {
     public void registerServerAliases() {
         Map<String, String[]> values = server.getCommandAliases();
 
-        for (String alias : values.keySet()) {
-            String[] targetNames = values.get(alias);
+        for (Map.Entry<String, String[]> entry : values.entrySet()) {
+            String alias = entry.getKey();
+            String[] targetNames = entry.getValue();
             List<Command> targets = new ArrayList<Command>();
             StringBuilder bad = new StringBuilder();
 

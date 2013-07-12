@@ -2,6 +2,7 @@ package org.bukkit.util;
 
 import java.util.Map;
 import org.bukkit.configuration.serialization.SerializableAs;
+import org.hamcrest.SelfDescribing;
 
 /**
  * A vector with a hash function that floors the X, Y, Z components, a la
@@ -79,6 +80,10 @@ public class BlockVector extends Vector {
      */
     @Override
     public boolean equals(Object obj) {
+        if (!super.equals(obj)) {
+            return false;
+        }
+        
         if (!(obj instanceof BlockVector)) {
             return false;
         }

@@ -21,6 +21,13 @@ public class ExactMatchConversationCanceller implements ConversationCanceller {
     }
 
     public ConversationCanceller clone() {
-        return new ExactMatchConversationCanceller(escapeSequence);
+        ExactMatchConversationCanceller obj;
+        try {
+            obj = (ExactMatchConversationCanceller) super.clone();
+        } catch (CloneNotSupportedException e) {
+            return null;
+        }
+        obj.escapeSequence = escapeSequence;
+        return obj;
     }
 }

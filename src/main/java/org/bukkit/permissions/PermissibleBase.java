@@ -176,11 +176,12 @@ public class PermissibleBase implements Permissible {
     }
 
     private void calculateChildPermissions(Map<String, Boolean> children, boolean invert, PermissionAttachment attachment) {
-        Set<String> keys = children.keySet();
 
-        for (String name : keys) {
+        for (Map.Entry<String, Boolean> entry : children.entrySet()) {
+            String name = entry.getKey();
+            Boolean b = entry.getValue();
             Permission perm = Bukkit.getServer().getPluginManager().getPermission(name);
-            boolean value = children.get(name) ^ invert;
+            boolean value = b ^ invert;
             String lname = name.toLowerCase();
 
             permissions.put(lname, new PermissionAttachmentInfo(parent, lname, attachment, value));

@@ -9,7 +9,7 @@ import org.bukkit.plugin.Plugin;
 public class InactivityConversationCanceller implements ConversationCanceller {
     protected Plugin plugin;
     protected int timeoutSeconds;
-    protected Conversation conversation;
+    protected Conversation conversation = null;
     private int taskId = -1;
 
     /**
@@ -51,7 +51,7 @@ public class InactivityConversationCanceller implements ConversationCanceller {
                     conversation.abandon(new ConversationAbandonedEvent(conversation, InactivityConversationCanceller.this));
                 }
             }
-        }, timeoutSeconds * 20);
+        }, (long) timeoutSeconds * 20);
     }
 
     /**

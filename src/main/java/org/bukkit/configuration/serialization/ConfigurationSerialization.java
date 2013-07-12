@@ -112,6 +112,7 @@ public class ConfigurationSerialization {
             result = deserializeViaMethod(method, args);
         }
 
+
         if (result == null) {
             method = getMethod("valueOf", true);
 
