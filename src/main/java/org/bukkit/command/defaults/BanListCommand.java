@@ -27,7 +27,7 @@ public class BanListCommand extends VanillaCommand {
 
         // TODO: ips support
         StringBuilder message = new StringBuilder();
-        OfflinePlayer[] banlist = Bukkit.getServer().getBannedPlayers().toArray(new OfflinePlayer[0]);
+        OfflinePlayer[] banlist = Bukkit.getServer().getBannedPlayers().toArray(new OfflinePlayer[1]);
 
         for (int x = 0; x < banlist.length; x++) {
             if (x != 0) {

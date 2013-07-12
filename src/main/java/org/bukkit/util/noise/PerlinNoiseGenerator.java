@@ -9,7 +9,7 @@ import org.bukkit.World;
  * @see SimplexNoiseGenerator "Improved" and faster version with slighly different results
  */
 public class PerlinNoiseGenerator extends NoiseGenerator {
-    protected static final int grad3[][] = {{1, 1, 0}, {-1, 1, 0}, {1, -1, 0}, {-1, -1, 0},
+    static final int grad3[][] = {{1, 1, 0}, {-1, 1, 0}, {1, -1, 0}, {-1, -1, 0},
         {1, 0, 1}, {-1, 0, 1}, {1, 0, -1}, {-1, 0, -1},
         {0, 1, 1}, {0, -1, 1}, {0, 1, -1}, {0, -1, -1}};
     private static final PerlinNoiseGenerator instance = new PerlinNoiseGenerator();
